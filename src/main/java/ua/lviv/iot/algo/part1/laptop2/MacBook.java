@@ -21,8 +21,9 @@ public class MacBook extends AbstractLaptop {
     }
 
     @Override
-    public void replaceBattery(int capacityInHours) {
+    public int replaceBattery(int capacityInHours) {
         this.batteryLife = capacityInHours;
+        return batteryLife;
     }
 
 }

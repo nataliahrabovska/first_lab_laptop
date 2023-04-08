@@ -21,7 +21,8 @@ public class Ultrabook extends AbstractLaptop {
     }
 
     @Override
-    public void replaceBattery(int capacityInHours) {
-        System.out.println("replacement of the battery for ultrabooks is not possible");
+    public int replaceBattery(int capacityInHours) {
+        this.batteryLife = capacityInHours;
+        return batteryLife;
     }
 }

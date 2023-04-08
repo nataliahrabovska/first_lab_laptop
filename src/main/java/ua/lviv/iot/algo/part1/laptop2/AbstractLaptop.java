@@ -9,7 +9,6 @@ import lombok.ToString;
 @Getter
 @AllArgsConstructor
 @ToString
-
 public abstract class AbstractLaptop {
     protected String model;
     protected double screenSize;
@@ -18,7 +17,7 @@ public abstract class AbstractLaptop {
     protected int batteryLife;
     protected int batteryLevel;
 
-    public abstract void replaceBattery(int capacityInHours);
+    public abstract int replaceBattery(int capacityInHours);
 
     public AbstractLaptop() {
         model = "Unknown";
