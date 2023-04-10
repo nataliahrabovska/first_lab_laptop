@@ -6,7 +6,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class AbstractLaptopManagerTest {
     private List<AbstractLaptop> list = new ArrayList<>();
@@ -49,5 +49,10 @@ class AbstractLaptopManagerTest {
         expectedOutput.add(laptop2);
         expectedOutput.add(laptop4);
         assertEquals(expectedOutput, manager.findByRamGreaterThan(4));
+    }
+    @Test
+    void testAddLaptopToList(){
+        manager.addLaptopToList(new GamingLaptop("Victus", 15.6, 8, 512, 4, 99, "Nvidia  ", 2));
+        assertEquals(5,manager.getLaptops().size());
     }
 }

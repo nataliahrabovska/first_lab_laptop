@@ -10,12 +10,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public abstract class AbstractLaptop {
-    protected String model;
-    protected double screenSize;
-    protected int ram;
-    protected int storage;
-    protected int batteryLife;
-    protected int batteryLevel;
+    private String model;
+    private double screenSize;
+    private int ram;
+    private int storage;
+    private int batteryLife;
+    private int batteryLevel;
 
     public abstract int replaceBattery(int capacityInHours);
 
@@ -28,11 +28,11 @@ public abstract class AbstractLaptop {
         batteryLevel = 100;
     }
 
-    public void addRam(int value) {
+    public void addRam(final int value) {
         ram += value;
     }
 
-    public void addStorage(int value) {
+    public void addStorage(final int value) {
         storage += value;
     }
 
