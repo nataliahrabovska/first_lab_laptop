@@ -14,17 +14,17 @@ public class GamingLaptop extends AbstractLaptop {
     private String graphicsProcessor;
     private int fansForCooling;
 
-    public GamingLaptop(String model, double screenSize, int ram, int storage, int batteryLife, int batteryLevel, String graphicsProcessor, int fansForCooling) {
+    public GamingLaptop(final String model, final double screenSize, final int ram, final int storage, final int batteryLife, final int batteryLevel, final String graphicsProcessor, final int fansForCooling) {
         super(model, screenSize, ram, storage, batteryLife, batteryLevel);
         this.graphicsProcessor = graphicsProcessor;
         this.fansForCooling = fansForCooling;
     }
 
     @Override
-    public int replaceBattery(int capacityInHours) {
+    public int replaceBattery(final int capacityInHours) {
 
         this.batteryLife = capacityInHours;
-        return capacityInHours;
+        return this.batteryLife;
     }
 
 }

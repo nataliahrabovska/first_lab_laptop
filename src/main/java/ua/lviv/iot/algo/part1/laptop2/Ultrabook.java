@@ -14,14 +14,14 @@ public class Ultrabook extends AbstractLaptop {
     private double weightOfTheDevice;
     private double deviceThickness;
 
-    public Ultrabook(String model, double screenSize, int ram, int storage, int batteryLife, int batteryLevel, double weightOfTheDevice, double deviceThickness) {
+    public Ultrabook(final String model, final double screenSize, final int ram, final int storage, final int batteryLife, final int batteryLevel, final double weightOfTheDevice, final double deviceThickness) {
         super(model, screenSize, ram, storage, batteryLife, batteryLevel);
         this.weightOfTheDevice = weightOfTheDevice;
         this.deviceThickness = deviceThickness;
     }
 
     @Override
-    public int replaceBattery(int capacityInHours) {
+    public int replaceBattery(final int capacityInHours) {
         this.batteryLife = capacityInHours;
         return batteryLife;
     }

@@ -14,14 +14,14 @@ public class MacBook extends AbstractLaptop {
     private String color;
     private int guaranteeInMonth;
 
-    public MacBook(String model, double screenSize, int ram, int storage, int batteryLife, int batteryLevel, String color, int guarantee) {
+    public MacBook(final String model, final double screenSize, final int ram, final int storage, final int batteryLife, final int batteryLevel, final String color, final int guarantee) {
         super(model, screenSize, ram, storage, batteryLife, batteryLevel);
         this.color = color;
         this.guaranteeInMonth = guarantee;
     }
 
     @Override
-    public int replaceBattery(int capacityInHours) {
+    public int replaceBattery(final int capacityInHours) {
         this.batteryLife = capacityInHours;
         return batteryLife;
     }
