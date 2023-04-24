@@ -1,10 +1,12 @@
-package ua.lviv.iot.algo.part1.laptop2;
+package ua.lviv.iot.algo.part1.laptop2.manager;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ua.lviv.iot.algo.part1.laptop2.manager.AbstractLaptopManager;
+import ua.lviv.iot.algo.part1.laptop2.models.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

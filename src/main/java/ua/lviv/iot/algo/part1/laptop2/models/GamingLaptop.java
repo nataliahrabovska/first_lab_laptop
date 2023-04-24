@@ -1,9 +1,10 @@
-package ua.lviv.iot.algo.part1.laptop2;
+package ua.lviv.iot.algo.part1.laptop2.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import ua.lviv.iot.algo.part1.laptop2.models.AbstractLaptop;
 
 @Setter
 @Getter
@@ -23,8 +24,20 @@ public class GamingLaptop extends AbstractLaptop {
     @Override
     public int replaceBattery(final int capacityInHours) {
 
-        this.batteryLife = capacityInHours;
-        return this.batteryLife;
+        this.setBatteryLife(capacityInHours);
+        return this.getBatteryLife();
     }
 
+    @Override
+    public String getClassName() {
+        return "GamingLaptop";
+    }
+
+    public String getHeaders() {
+        return super.getHeaders() + ", " + "graphicsProcessor, fansForCooling";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + graphicsProcessor + ", " + fansForCooling;
+    }
 }

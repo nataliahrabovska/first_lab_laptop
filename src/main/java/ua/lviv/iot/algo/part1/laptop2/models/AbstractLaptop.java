@@ -1,4 +1,4 @@
-package ua.lviv.iot.algo.part1.laptop2;
+package ua.lviv.iot.algo.part1.laptop2.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +19,7 @@ public abstract class AbstractLaptop {
 
     public abstract int replaceBattery(int capacityInHours);
 
+    public abstract String getClassName();
     public AbstractLaptop() {
         model = "Unknown";
         screenSize = 15.6;
@@ -39,5 +40,13 @@ public abstract class AbstractLaptop {
     public void charge() {
         batteryLevel = 100;
     }
+    public String getHeaders() {
+        return "model, screenSize, ram, storage, batteryLife, batteryLevel";
+    }
+
+    public String toCSV() {
+        return model + ", " + screenSize + ", " + ram + ", " + storage + ", " + batteryLife + ", " + batteryLevel + ", ";
+    }
+
 
 }

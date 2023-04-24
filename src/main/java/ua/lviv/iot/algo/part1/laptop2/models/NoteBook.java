@@ -1,9 +1,10 @@
-package ua.lviv.iot.algo.part1.laptop2;
+package ua.lviv.iot.algo.part1.laptop2.models;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import ua.lviv.iot.algo.part1.laptop2.models.AbstractLaptop;
 
 @Setter
 @Getter
@@ -22,7 +23,21 @@ public class NoteBook extends AbstractLaptop {
 
     @Override
     public int replaceBattery(final int capacityInHours) {
-        this.batteryLife = capacityInHours;
-        return capacityInHours;
+
+        this.setBatteryLife(capacityInHours);
+        return this.getBatteryLife();
+    }
+
+    @Override
+    public String getClassName() {
+        return "NoteBook";
+    }
+
+    public String getHeaders() {
+        return super.getHeaders() + ", " + "matrixType, ghz";
+    }
+
+    public String toCSV() {
+        return super.toCSV() + matrixType + ", " + ghz;
     }
 }
