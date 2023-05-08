@@ -16,7 +16,7 @@ import ua.lviv.iot.algo.part1.laptop2.models.MacBook;
 import java.util.List;
 
 @RestController
-@RequestMapping("/lab6")
+@RequestMapping("/macbook")
 public class MacBooksController {
 
     private final MacBooksService macBook;
@@ -26,12 +26,12 @@ public class MacBooksController {
         this.macBook = macBook;
     }
 
-    @GetMapping("/macbooks/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<MacBook> readById(@PathVariable("id") final Integer id) {
         return ResponseEntity.ok(macBook.readById(id));
     }
 
-    @GetMapping("/macbooks")
+    @GetMapping
     public ResponseEntity<List<MacBook>> returnAll() {
         return ResponseEntity.ok(macBook.returnAll());
     }
@@ -41,13 +41,13 @@ public class MacBooksController {
         return macBook.addMacBook(laptop);
     }
 
-    @DeleteMapping("/macbooks/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<MacBook> deleteMacBook(@PathVariable("id") final Integer id) {
         macBook.deleteMacBook(id);
         return ResponseEntity.noContent().build();
     }
 
-    @PatchMapping("/macbooks/{id}")
+    @PatchMapping("/{id}")
     public ResponseEntity<MacBook> updateMacBook(@PathVariable("id") Integer id, @RequestBody final MacBook macBook1) {
         return ResponseEntity.ok(macBook.updateMacBook(macBook1, id));
     }
