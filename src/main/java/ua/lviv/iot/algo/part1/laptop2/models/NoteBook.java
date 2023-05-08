@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import ua.lviv.iot.algo.part1.laptop2.models.AbstractLaptop;
 
 @Setter
 @Getter

@@ -3,12 +3,15 @@ package ua.lviv.iot.algo.part1.laptop2.manager;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import ua.lviv.iot.algo.part1.laptop2.models.*;
+import ua.lviv.iot.algo.part1.laptop2.models.AbstractLaptop;
+import ua.lviv.iot.algo.part1.laptop2.models.GamingLaptop;
+import ua.lviv.iot.algo.part1.laptop2.models.MacBook;
+import ua.lviv.iot.algo.part1.laptop2.models.NoteBook;
+import ua.lviv.iot.algo.part1.laptop2.models.Ultrabook;
 import ua.lviv.iot.algo.part1.laptop2.writer.LaptopWriter;
 
-import java.io.IOException;
-import java.util.List;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 @Setter

@@ -1,7 +1,6 @@
 package ua.lviv.iot.algo.part1.laptop2.models;
 
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.algo.part1.laptop2.models.MacBook;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

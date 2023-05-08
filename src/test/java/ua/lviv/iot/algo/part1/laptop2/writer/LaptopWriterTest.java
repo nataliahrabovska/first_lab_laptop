@@ -5,11 +5,11 @@ import org.junit.jupiter.api.BeforeEach;
 import ua.lviv.iot.algo.part1.laptop2.models.*;
 
 import java.io.File;
-import java.util.LinkedList;
-import java.util.List;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.LinkedList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

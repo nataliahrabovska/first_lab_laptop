@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import ua.lviv.iot.algo.part1.laptop2.models.AbstractLaptop;
 
 @Setter
 @Getter
@@ -12,8 +11,10 @@ import ua.lviv.iot.algo.part1.laptop2.models.AbstractLaptop;
 @ToString(callSuper = true)
 
 public class MacBook extends AbstractLaptop {
+
     private String color;
     private int guaranteeInMonth;
+    private Integer id;
 
     public MacBook(final String model, final double screenSize, final int ram, final int storage, final int batteryLife, final int batteryLevel, final String color, final int guarantee) {
         super(model, screenSize, ram, storage, batteryLife, batteryLevel);
@@ -40,4 +41,5 @@ public class MacBook extends AbstractLaptop {
     public String toCSV() {
         return super.toCSV() + color + ", " + guaranteeInMonth;
     }
+
 }
