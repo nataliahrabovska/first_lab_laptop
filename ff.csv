@@ -1,0 +1,10 @@
+model, screenSize, ram, storage, batteryLife, batteryLevel, graphicsProcessor, fansForCooling
+Victus, 15.6, 8, 512, 4, 99, Nvidia  , 2
+Legion, 15.6, 16, 512, 5, 100, AMD Ryzen, 2
+model, screenSize, ram, storage, batteryLife, batteryLevel, matrixType, ghz
+HP, 12.0, 16, 64, 3, 100, Ips, 3
+model, screenSize, ram, storage, batteryLife, batteryLevel, color, guaranteeInMonth
+Air, 13.6, 8, 256, 4, 97, grey, 12
+model, screenSize, ram, storage, batteryLife, batteryLevel, weightOfTheDevice, deviceThickness
+HP, 12.0, 16, 64, 3, 100, 1.2, 3
+Redmi, 13.0, 8, 128, 4, 75, 0.9, 4
